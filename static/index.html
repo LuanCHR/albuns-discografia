@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#14131a">
+  <title>álbuns · discografia</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="home">
+  <header class="top">
+    <a class="marca" id="marca" href="/" aria-label="álbuns, voltar ao início">
+      <img class="logo" src="/logo.svg" alt="álbuns" width="1970" height="692">
+    </a>
+
+    <div class="busca">
+      <input id="q" type="search" placeholder="Busque um artista ou banda"
+             autocomplete="off" aria-label="Buscar artista" aria-controls="sugestoes">
+      <ul id="sugestoes" class="sugestoes" role="listbox" hidden></ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="inicio">
+      <p class="chamada">Veja todos os álbuns de um artista ou banda, do primeiro ao mais recente, numa parede de capas.</p>
+      <div id="exemplos" class="exemplos" role="group" aria-label="Artistas para experimentar"></div>
+    </section>
+
+    <div id="vitrine" class="vitrine" aria-label="Álbuns em alta no momento" hidden></div>
+
+    <p id="status" class="status" role="status" hidden></p>
+
+    <section id="artista" hidden>
+      <img id="fundo" class="cab-fundo" alt="" hidden>
+      <div class="cab">
+        <img id="foto" class="foto" alt="" width="144" height="144" hidden>
+        <div>
+          <h2 id="nome"></h2>
+          <p id="resumo"></p>
+        </div>
+      </div>
+
+      <dl id="numeros" class="numeros" hidden></dl>
+
+      <div class="ferramentas">
+        <div id="filtros" class="filtros" role="group" aria-label="Tipo de lançamento"></div>
+        <div class="acoes">
+          <button id="compacto" class="ordem" type="button" aria-pressed="false" hidden>Capas pequenas</button>
+          <button id="ordem" class="ordem" type="button"></button>
+          <button id="copiar" class="ordem" type="button">Copiar link</button>
+        </div>
+      </div>
+
+      <div id="parede" class="parede"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Dados e capas: <a href="https://www.deezer.com" target="_blank" rel="noopener">Deezer</a></span>
+  </footer>
+
+  <dialog id="detalhe" class="sheet" aria-label="Detalhe do álbum"></dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
